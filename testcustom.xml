@@ -4,8 +4,14 @@
  <parameter name="Uname" value="santhana@thebinco.com" />
  <parameter name="pass" value="123456" />
   <test thread-count="5" name="Test">
+  <groups>
+      <run>
+        <exclude name="ClassTest1"/>
+      </run>
+    </groups>
     <classes>
-      <class name="com.binco.test.Logintest"/>
+      <!-- <class name="com.binco.test.Logintest"/> -->
+      <class name="com.binco.test.Signtest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

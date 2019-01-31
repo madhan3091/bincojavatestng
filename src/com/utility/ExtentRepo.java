@@ -10,10 +10,10 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 public class ExtentRepo {
-	ExtentReports reports;
-	ExtentHtmlReporter htmlReporter;
-	ExtentTest test;
-	WebDriver driver;
+	public ExtentReports reports;
+	public ExtentHtmlReporter htmlReporter;
+    public ExtentTest test;
+    public WebDriver driver;
 	
 	@BeforeTest
 	public void startTest() {
@@ -38,6 +38,11 @@ public class ExtentRepo {
 	
 	
 	
+	
+	public ExtentRepo() {
+		super();
+	}
+
 	@AfterTest
 	public void endTest() {
 		

@@ -4,16 +4,21 @@
   <parameter name="Uname" value="santhana@thebinco.com"/>
   <parameter name="pass" value="123456"/>
   <test thread-count="1" name="Test(failed)">
+    <groups>
+      <run>
+        <exclude name="ClassTest1"/>
+      </run>
+    </groups>
     <classes>
-      <class name="com.binco.test.Logintest">
+      <class name="com.binco.test.Signtest">
         <methods>
-          <include name="logintest2"/>
-          <include name="logintest1"/>
-          <include name="aftertest"/>
-          <include name="logintest"/>
+          <include name="startTest"/>
           <include name="setup"/>
+          <include name="signtest"/>
+          <include name="aftertest"/>
+          <include name="endTest"/>
         </methods>
-      </class> <!-- com.binco.test.Logintest -->
+      </class> <!-- com.binco.test.Signtest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
