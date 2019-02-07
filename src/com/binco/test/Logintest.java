@@ -17,7 +17,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.binco.dataprovider.parameter;
-import com.binco.pages.basepage;
+import com.binco.pages.Basepage;
 import com.utility.CaptureScreenShot;
 import com.utility.ExtentRepo;
 
@@ -48,31 +48,41 @@ public class Logintest extends ExtentRepo{
 	   }
 	
 	
-	@Test(priority = 1)
+	@Test(priority = 1, enabled=false)
 	 public void logintest() throws InterruptedException, IOException {
 		   
 		   test = reports.createTest("verify the login test");
-		   basepage base = new basepage(driver);
+		   Basepage base = new Basepage(driver);
 		   base.setaccount();
 		   Thread.sleep(5000);
 
 	}
-	@Test(priority = 2)	
+	@Test(priority = 2,enabled=false)	
 	@Parameters({"Uname","pass"})
 	 public void logintest1(String Uname,String pass) throws InterruptedException, IOException {
 		   
-		  test = reports.createTest("verify the login test2");
-		   basepage base = new basepage(driver);
+		   test = reports.createTest("verify the login test2");
+		   Basepage base = new Basepage(driver);
 		   base.setaccount1(Uname,pass);
 		   Thread.sleep(5000);
 
 	}
-	@Test(dataProvider="loginProvider",dataProviderClass=parameter.class,priority = 3)
+	@Test(dataProvider="loginProvider",dataProviderClass=parameter.class,priority = 3,enabled=false)
 	 public void logintest2(String Uname,String pass) throws InterruptedException, IOException {
 		   
 		   test = reports.createTest("verify the login test 3");
-		   basepage base = new basepage(driver);
+		   Basepage base = new Basepage(driver);
 		   base.setaccount2(Uname,pass);
+		   Thread.sleep(5000);
+
+	}
+	
+	@Test(priority = 1)
+	 public void logintest3() throws Exception {
+		   
+		   test = reports.createTest("verify the login test");
+		   Basepage base = new Basepage(driver);
+		   base.setaccount3();
 		   Thread.sleep(5000);
 
 	}

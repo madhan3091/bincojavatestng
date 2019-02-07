@@ -52,6 +52,16 @@ public class Signtest extends ExtentRepo {
 		   Thread.sleep(5000);
 
 	}
+	@Test(priority = 2)
+	 public void signtest1() throws InterruptedException, IOException {
+		   
+		   test = reports.createTest("verify the signin negative test");
+		   signup sign = new signup(driver);
+		   sign.signupaccount1();
+		   Thread.sleep(5000);
+
+	}
+	
 	
 	@AfterMethod
 	public void aftertest(ITestResult result)throws IOException{
